@@ -1,14 +1,14 @@
 # LMS
 Implementation of Concurrent Library Management System (LMS) with RESTful API
 
-This is my implementation for Library Management System (LMS). I followed Domain Driven Design (DDD) for this implementation. I have introduced 4 custom exceptions and extensive test coverage for the following classes <br>
+This is my implementation for Library Management System (LMS). I followed Domain Driven Design (DDD) for this implementation and introduced 4 custom exceptions and extensive test coverage for the following classes <br>
 Library class - LibraryTest.java <br>
 InMemoryBookRepository class - InMemoryBookRepositoryTest.java <br>
 BookController class - BookControllerTest.java
 
 # How to Run
-Open LMS source in your IDE and locate Maven tab. Then navigate to Lms -> Plugins -> spring-boot and click on spring-boot:run
-This will get application up and running on default port 8080. Now open Postman use below endpoints and requests for each of the actions listed below.
+Open LMS source in your IDE and locate Maven tab. Then navigate to Lms -> Plugins -> spring-boot and click on spring-boot:run.
+This will get application up and running on default port 8080. Now, open Postman and use below endpoints and requests for each of the actions listed below.
 
 **1. Add Book** <br>
 Endpoint - http://localhost:8080/book/add <br>
@@ -28,7 +28,7 @@ Book(isbn=123, title=test, author=test, publicationYear=2000, availableCopies=5)
 
 Submit few requests by changing the values above so that you will have few books in the library to test with.
 
-Since the below 5 operations use @RequestParam, you can use Postman with appropriate option (put, delete, and get) selected from operation dropdown for the endpoints below without body
+Since the below 5 operations use @RequestParam, you can use Postman with appropriate option (put, delete, and get) selected from the operation dropdown for the endpoints below without body.
 
 **2. Remove Book** <br>
 Endpoint - http://localhost:8080/book/remove?isbn=123 <br>
@@ -61,4 +61,4 @@ Response - <br>
 Book(isbn=123, title=test1, author=author1, publicationYear=2000, availableCopies=1)
 
 # Assumptions
-I assumed that all attributes of Book class are mandatory and annotate then with @NonNull
+I assumed that all attributes of Book class are mandatory and annotated them with @NonNull
